@@ -1,0 +1,345 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "5:4277408584450468970",
+      "lastPropertyId": "14:8781182987929775007",
+      "name": "LSStockPerCorporationEntity",
+      "properties": [
+        {
+          "id": "1:671353427894024158",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5378814689137516773",
+          "name": "stockID",
+          "type": 9
+        },
+        {
+          "id": "3:7374717305924422073",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "4:6904256401955729174",
+          "name": "foreignBuy",
+          "type": 9
+        },
+        {
+          "id": "5:1436973058898061413",
+          "name": "foreignSell",
+          "type": 9
+        },
+        {
+          "id": "6:6344552870484368971",
+          "name": "foreignOver",
+          "type": 9
+        },
+        {
+          "id": "7:2741384055217995910",
+          "name": "investmentBuy",
+          "type": 9
+        },
+        {
+          "id": "8:313165729391580124",
+          "name": "investmentSell",
+          "type": 9
+        },
+        {
+          "id": "9:7177817478694093022",
+          "name": "investmentOver",
+          "type": 9
+        },
+        {
+          "id": "10:3341636870623253106",
+          "name": "selfBuy",
+          "type": 9
+        },
+        {
+          "id": "11:958098851153600550",
+          "name": "selfSell",
+          "type": 9
+        },
+        {
+          "id": "12:5112181306666026039",
+          "name": "selfOver",
+          "type": 9
+        },
+        {
+          "id": "13:7762171668268391110",
+          "name": "totalOver",
+          "type": 9
+        },
+        {
+          "id": "14:8781182987929775007",
+          "name": "stockItemId",
+          "indexId": "3:2263050672808862698",
+          "type": 11,
+          "flags": 1548,
+          "relationTarget": "LSStockEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:8833813902488633821",
+      "lastPropertyId": "5:1556238758596192471",
+      "name": "LSStockEntity",
+      "properties": [
+        {
+          "id": "1:8459473140781850330",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4927712415447376286",
+          "name": "stockID",
+          "type": 9
+        },
+        {
+          "id": "3:6493169841758474602",
+          "name": "stockName",
+          "type": 9
+        },
+        {
+          "id": "4:8527545404107235606",
+          "name": "stockMonthAvg",
+          "type": 9
+        },
+        {
+          "id": "5:1556238758596192471",
+          "name": "type",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:604789335183920913",
+      "lastPropertyId": "12:5058970576958585352",
+      "name": "LSStockPerDayEntity",
+      "properties": [
+        {
+          "id": "1:5136352828829488341",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:764247924127453454",
+          "name": "stockID",
+          "type": 9
+        },
+        {
+          "id": "3:4181273520461075329",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "4:42967296591448725",
+          "name": "openPrize",
+          "type": 9
+        },
+        {
+          "id": "5:6690802484819398834",
+          "name": "closePrize",
+          "type": 9
+        },
+        {
+          "id": "6:7857045372933282846",
+          "name": "range",
+          "type": 9
+        },
+        {
+          "id": "7:849426275511271429",
+          "name": "highestPrize",
+          "type": 9
+        },
+        {
+          "id": "8:8569316391669653846",
+          "name": "lowestPrize",
+          "type": 9
+        },
+        {
+          "id": "9:2179560099739897355",
+          "name": "dealStock",
+          "type": 9
+        },
+        {
+          "id": "10:5855411663511723585",
+          "name": "dealCount",
+          "type": 9
+        },
+        {
+          "id": "11:3700020239967278247",
+          "name": "dealTotalPrize",
+          "type": 9
+        },
+        {
+          "id": "12:5058970576958585352",
+          "name": "stockItemId",
+          "indexId": "4:2128476496597797202",
+          "type": 11,
+          "flags": 1548,
+          "relationTarget": "LSStockEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:8025300699726630502",
+      "lastPropertyId": "15:2267164493454696166",
+      "name": "LSOperatingRevenueEntity",
+      "properties": [
+        {
+          "id": "1:4859876970317955100",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2073857562338976889",
+          "name": "releaseDate",
+          "type": 9
+        },
+        {
+          "id": "3:8736633854681835486",
+          "name": "dataDate",
+          "type": 9
+        },
+        {
+          "id": "4:6943523091790831287",
+          "name": "stockID",
+          "type": 9
+        },
+        {
+          "id": "5:551584160745053785",
+          "name": "stockName",
+          "type": 9
+        },
+        {
+          "id": "6:1204904525038787267",
+          "name": "companyType",
+          "type": 9
+        },
+        {
+          "id": "7:8941598252052430380",
+          "name": "revenue",
+          "type": 9
+        },
+        {
+          "id": "8:3412685698560910057",
+          "name": "compareWithLastMonthRevenue",
+          "type": 9
+        },
+        {
+          "id": "9:5041879120887989591",
+          "name": "compareWithLastYearRevenue",
+          "type": 9
+        },
+        {
+          "id": "10:5919258700374418695",
+          "name": "compareWithLastMonthRevenuePercent",
+          "type": 9
+        },
+        {
+          "id": "11:5105055466495274755",
+          "name": "compareWithLastYearRevenuePercent",
+          "type": 9
+        },
+        {
+          "id": "12:7865045483465037536",
+          "name": "totalRevenueDeductThisMonth",
+          "type": 9
+        },
+        {
+          "id": "13:7129465585089299530",
+          "name": "totalRevenueDeductLastYear",
+          "type": 9
+        },
+        {
+          "id": "14:6523457352874064999",
+          "name": "totalRevenueCompareWithLastTimePercent",
+          "type": 9
+        },
+        {
+          "id": "15:2267164493454696166",
+          "name": "tag",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "8:8025300699726630502",
+  "lastIndexId": "4:2128476496597797202",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    4235581618007462621,
+    4703734741990850960,
+    9156495744124666776,
+    926219462052145132
+  ],
+  "retiredIndexUids": [
+    1584144637165631543,
+    17799393420107064
+  ],
+  "retiredPropertyUids": [
+    7273967637084948493,
+    6688175822129397533,
+    1785653423462962930,
+    6685856998832586053,
+    8976824264351107198,
+    2017048894058666811,
+    1150673135533176596,
+    6341265281225515575,
+    8295374206521725707,
+    7508379341302344660,
+    7529718109596671967,
+    2732527240736168103,
+    574549812008642681,
+    7684336831278802998,
+    4278441393809209811,
+    5625275458379550244,
+    2266109689875560797,
+    5701589010702539521,
+    6364285116696907424,
+    6577390208305683675,
+    5296494577930146909,
+    755806853366210176,
+    325744179683769688,
+    2215555908613910076,
+    2287915958525511353,
+    1001094681232340093,
+    3339957266348890722,
+    9177179415886562947,
+    3351530160426980942,
+    2142528340509023270,
+    2813017005941418084,
+    9098568114555093767,
+    1182143474501061652,
+    6982682349995207461,
+    7973674672359332238,
+    2920565607091884856,
+    9080604192766589028,
+    3164491475521835353,
+    7494888543099122445,
+    4160256925342177515,
+    2102451031788986083,
+    2823289340075852742,
+    1701559499173456841,
+    822101770461583463,
+    7566670293339723379,
+    4932304547098391912
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

@@ -1,9 +1,11 @@
 plugins {
     id 'com.android.application'
+    id 'io.objectbox'
 }
 
 android {
     compileSdkVersion 29
+    buildToolsVersion "29.0.2"
 
 
     defaultConfig {
@@ -15,6 +17,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         flavorDimensions "versionCode"
+
 
     }
 
@@ -28,9 +31,10 @@ android {
         //region
         anson_test {
             dimension "versionCode"
-            buildConfigField "String", "VERSION_FLAVOR", "\"TEST_FOR_ANSON\""
+            buildConfigField "String", "VERSION_FLAVOR", "\"TEST_FOR_INSIDE\""
             buildConfigField "String", "BASE_STOCK_URL", "\"https://www.twse.com.tw/\""
             buildConfigField "String", "BASE_REAL_TIME_STOCK_URL", "\"https://mis.twse.com.tw/\""
+            buildConfigField "String", "BASE_OPERATING_REVENUE", "\"https://openapi.twse.com.tw/v1/\""
         }
         //endregion
     }
@@ -51,7 +55,7 @@ dependencies {
 
     //viewmodel
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.lifecycle:lifecycle-viewmodel:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.3.0"
 
     //Rxjava
     implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
@@ -60,13 +64,33 @@ dependencies {
     //Timber
     implementation "com.jakewharton.timber:timber:4.5.1"
 
+    //Retrofit
     api 'com.squareup.retrofit2:retrofit:2.9.0'
     api 'com.squareup.retrofit2:converter-scalars:2.9.0'
     api 'com.squareup.retrofit2:converter-gson:2.9.0'
     api 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     implementation "com.squareup.okhttp3:okhttp:3.14.9"
+    annotationProcessor 'org.androidannotations:androidannotations:4.7.0'
+    implementation 'org.androidannotations:androidannotations-api:4.7.0'
 
     //RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    //WaitDialog
+    implementation 'com.kongzue.dialog_v3:dialog:3.2.4'
+
+
+    // RxBinding
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.1.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-core:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-appcompat:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-drawerlayout:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-leanback:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-recyclerview:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-slidingpanelayout:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-swiperefreshlayout:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-viewpager:3.0.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-material:3.0.0'
+
 }

@@ -15,9 +15,12 @@ import timber.log.Timber;
 public class StockSearchApplication extends Application {
 
     private ApiManager mApimanager;
+    private ApiManager mOperatingApiManager;
     private Retrofit mRetrofit;
+    private Retrofit mOperatingRetrofit;
 
-    private static String BASE_STOCK_URL = BuildConfig.BASE_STOCK_URL;;
+
+    private static String BASE_STOCK_URL = BuildConfig.BASE_STOCK_URL;
 
     private static WeakReference<StockSearchApplication> Instance;
 
@@ -51,6 +54,18 @@ public class StockSearchApplication extends Application {
         return mRetrofit;
     }
 
+    public Retrofit getBaseOperatingRetrofit() {
+
+        if (mOperatingRetrofit == null) {
+            mOperatingRetrofit = new Retrofit.Builder()
+                    .baseUrl(BuildConfig.BASE_OPERATING_REVENUE)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(new OkHttpClient())
+                    .build();
+        }
+        return mOperatingRetrofit;
+    }
+
     public ApiManager getBaseStockApiManager() {
 
         if (mApimanager == null) {
@@ -58,4 +73,13 @@ public class StockSearchApplication extends Application {
         }
         return mApimanager;
     }
+
+    public ApiManager getBaseOperatingApiManager() {
+
+        if (mOperatingApiManager == null) {
+            mOperatingApiManager = new ApiManager(getBaseOperatingRetrofit());
+        }
+        return mOperatingApiManager;
+    }
+
 }

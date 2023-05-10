@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 
-public class LSApiResponse {
+public class LSCorporationResponse {
 
     @SerializedName("stat")
     private String mStatus;
@@ -23,43 +23,43 @@ public class LSApiResponse {
     private String mSelectType;
 
 
-    public String getmStatus() {
+    public String getStatus() {
         return mStatus;
     }
 
-    public void setmStatus(String mStatus) {
+    public void setStatus(String mStatus) {
         this.mStatus = mStatus;
     }
 
-    public String getmDate() {
+    public String getDate() {
         return mDate;
     }
 
-    public void setmDate(String mDate) {
+    public void setDate(String mDate) {
         this.mDate = mDate;
     }
 
-    public String getmTitle() {
+    public String getTitle() {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
+    public void setTitle(String mTitle) {
         this.mTitle = mTitle;
     }
 
-    public List<List<String>> getmThreeCorporationList() {
+    public List<List<String>> getThreeCorporationList() {
         return mThreeCorporationList;
     }
 
-    public void setmThreeCorporationList(List<List<String>> mThreeCorporationList) {
+    public void setThreeCorporationList(List<List<String>> mThreeCorporationList) {
         this.mThreeCorporationList = mThreeCorporationList;
     }
 
-    public String getmSelectType() {
+    public String getSelectType() {
         return mSelectType;
     }
 
-    public void setmSelectType(String mSelectType) {
+    public void setSelectType(String mSelectType) {
         this.mSelectType = mSelectType;
     }
 
